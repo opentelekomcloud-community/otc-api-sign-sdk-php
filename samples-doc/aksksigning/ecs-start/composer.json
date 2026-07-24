@@ -7,6 +7,6 @@
     }
   ],
   "require": {
-    "opentelekomcloud-community/otc-api-sign-sdk-php": "dev-main"
+    "opentelekomcloud-community/otc-api-sign-sdk-php": "dev-main as 1.0.0"
   }
 }
