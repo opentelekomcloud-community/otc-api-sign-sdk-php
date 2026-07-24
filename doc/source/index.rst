@@ -1,4 +1,4 @@
-Developer guide for otc-api-sign-sdk-python
+Developer guide for otc-api-sign-sdk-php
 ============================================
 
 .. toctree::
@@ -8,12 +8,12 @@ Developer guide for otc-api-sign-sdk-python
    Installation <installation/_index>
    Samples <samples/_index>
 
-OpenTelekomCloud Community SDK for signing API requests using python.
+OpenTelekomCloud Community SDK for signing API requests using PHP.
 
 Source Code
 -----------
 
-For source code, see :github_repo_master:`otc-api-sign-sdk-python<>` on Github.
+For source code, see :github_repo_master:`otc-api-sign-sdk-php<>` on Github.
 
 
 
