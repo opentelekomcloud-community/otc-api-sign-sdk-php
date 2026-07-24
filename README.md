@@ -1,2 +1,28 @@
 # otc-api-sign-sdk-php
 SDK for API signing for php
+
+## Documentation
+
+For documentation see: [otc-api-sign-sdk-php](https://opentelekomcloud-community.github.io/otc-api-sign-sdk-php/)
+
+>[!NOTE]
+> To run documentation locally:
+>
+> Install ``tox`` as described in: [tox installation guide ](https://tox.wiki/en/4.26.0/installation.html)
+>
+> and run:
+>
+>  ```bash
+>  tox -e docs-auto
+>  ```
+> Open documentation in browser: <http://127.0.0.1:8882>
+
+
+
+> Warranty Disclaimer
+> -------------------
+> THE OPEN SOURCE SOFTWARE IN THIS PRODUCT IS DISTRIBUTED IN THE HOPE THAT IT
+> WILL BE USEFUL,BUT WITHOUT ANY WARRANTY; WITHOUT EVEN THE IMPLIED WARRANTY
+> OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+> 
+> SEE THE APPLICABLE LICENSES FOR MORE DETAILS.
