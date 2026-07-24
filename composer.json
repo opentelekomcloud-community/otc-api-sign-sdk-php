@@ -6,7 +6,7 @@
   },
   "autoload": {
     "files": [
-      "ApiGateway-php-sdk/signer.php"
+      "otc_api_sign_core/signer.php"
     ]
   }
 }
