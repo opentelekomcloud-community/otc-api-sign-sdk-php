@@ -27,7 +27,7 @@ To access GitHub repository a GitHub OAuth Token is needed (see:
 
 
 .. code-block:: shell
-   :caption: 
+   :caption: env variable
 
    export COMPOSER_AUTH='{"github-oauth":{"github.com":"YOUR_GITHUB_TOKEN"}}'
   
