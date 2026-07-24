@@ -7,6 +7,6 @@
     }
   ],
   "require": {
-    "opentelekomcloud-community/otc-api-sign-sdk-php": "1.0.*"
+    "opentelekomcloud-community/otc-api-sign-sdk-php": "1.0.x"
   }
 }
