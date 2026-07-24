@@ -1,0 +1,13 @@
+{
+  "name": "opentelekomcloud-community/otc-api-sign-sdk-php",
+  "type": "library",
+
+  "require": {
+    "ext-curl": "*"
+  },
+  "autoload": {
+    "files": [
+      "ApiGateway-php-sdk/signer.php"
+    ]
+  }
+}
