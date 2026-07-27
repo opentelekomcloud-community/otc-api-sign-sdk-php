@@ -6,15 +6,23 @@ Developer guide for otc-api-sign-sdk-php
    :hidden:
 
    Installation <installation/_index>
+   Usage <usage/_index>
    Samples <samples/_index>
 
 OpenTelekomCloud Community SDK for signing API requests using PHP.
+
+For details on how to make API Requests,
+see:
+
+- :otc_docs:`Calling APIs <api-gateway/api-ref/calling_apis/index.html>`
+
+in the API Gateway documentation.
+
 
 Source Code
 -----------
 
 For source code, see :github_repo_master:`otc-api-sign-sdk-php<>` on Github.
-
 
 
 .. note:: **Warranty Disclaimer**
