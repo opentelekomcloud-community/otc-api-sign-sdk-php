@@ -15,7 +15,7 @@ For documentation see: [otc-api-sign-sdk-php](https://opentelekomcloud-community
 >  ```bash
 >  tox -e docs-auto
 >  ```
-> Open documentation in browser: <http://127.0.0.1:8882>
+> Open documentation in browser: <http://127.0.0.1:8892>
 
 
 
