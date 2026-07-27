@@ -18,7 +18,7 @@ Prerequisites
 For prerequisites, please refer to the :ref:`installation section <ref_installation>`.
 
 Create composer.json
-"""""""""""""""""
+"""""""""""""""""""""""""
 Create composer.json file in your project root directory with following content,
 as described in the :ref:`installation section <ref_installation>`.
 
@@ -39,7 +39,7 @@ as described in the :ref:`installation section <ref_installation>`.
 
 
 Install dependencies
-"""""""""""""""""""""""""""""
+"""""""""""""""""""""""""
 To install dependencies, run the following command:
 
 .. code-block:: bash
@@ -47,7 +47,7 @@ To install dependencies, run the following command:
   composer install
 
 Create a php file
-"""""""""""""""""""""""
+"""""""""""""""""""""""""
 
 Create a php file in your project root directory with following content:
 
