@@ -16,6 +16,10 @@ Install php
 Install package manager composer
 ---------------------------------
 
+Composer is a dependency manager for PHP.
+It allows you to manage your project dependencies and install packages from various sources, including GitHub.
+See: `Composer <https://getcomposer.org/>`_ for more information.
+
 .. code-block:: shell
    :caption: install composer
 
