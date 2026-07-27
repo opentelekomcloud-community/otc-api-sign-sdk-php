@@ -5,11 +5,17 @@ Installation
 
 The latest state of the packages can be installed directly from the GitHub repository.
 
+.. note::
+  This section describes how to install required components in a Linux environment.
+  
+  For other operating systems, please refer to the official documentation of your OS.
+
 Install php
 ------------------------------
 
+Install php8.1-cli package using the following command:
+
 .. code-block:: shell
-   :caption: install php
 
    sudo apt install php8.1-cli
 
@@ -21,7 +27,6 @@ It allows you to manage your project dependencies and install packages from vari
 See: `Composer <https://getcomposer.org/>`_ for more information.
 
 .. code-block:: shell
-   :caption: install composer
 
    curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer && composer --version
 
