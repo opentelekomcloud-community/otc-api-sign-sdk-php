@@ -8,5 +8,15 @@
     "files": [
       "otc_api_sign_core/signer.php"
     ]
+  },
+  "archive": {
+    "exclude": [
+      "/*",
+      "!/otc_api_sign_core",
+      "!/otc_api_sign_core/**",
+      "!/composer.json",
+      "!/LICENSE",
+      "!/README.md"
+    ]
   }
 }

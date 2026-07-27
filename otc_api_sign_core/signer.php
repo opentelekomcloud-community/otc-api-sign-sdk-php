@@ -5,6 +5,8 @@ define("HeaderXDate", "X-Sdk-Date");
 define("HeaderHost", "host");
 define("HeaderAuthorization", "Authorization");
 define("HeaderContentSha256", "X-Sdk-Content-Sha256");
+define("HeaderContentSha256_UNSIGNEDPAYLOAD", "UNSIGNED-PAYLOAD");
+define("HXSecurityToken", "X-Security-Token");
 
 
 class Request
@@ -95,6 +97,8 @@ class Signer
     public $Key = '';
     public $Secret = '';
 
+    public $SecurityToken = '';
+
     function escape($string)
     {
         $entities = array('+', "%7E");
@@ -127,11 +131,17 @@ class Signer
         $CanonicalQueryString = $this->CanonicalQueryString($r);
         $canonicalHeaders = $this->CanonicalHeaders($r, $signedHeaders);
         $signedHeadersString = join(";", $signedHeaders);
-        $hash = $this->findHeader($r, HeaderContentSha256);
-        if (!$hash) {
-            $hash = hash("sha256", $r->body);
+
+        $hencode = $this->findHeader($r, HeaderContentSha256);
+        
+        # sign body if x-sdk-content-sha256 
+        # - is not, or
+        # - set to UNSIGNED-PAYLOAD
+        // if (!$hash) {
+        if (!$hencode or $hencode !== HeaderContentSha256_UNSIGNEDPAYLOAD) {
+            $hencode = hash("sha256", $r->body);
         }
-        return "$r->method\n$CanonicalURI\n$CanonicalQueryString\n$canonicalHeaders\n$signedHeadersString\n$hash";
+        return "$r->method\n$CanonicalURI\n$CanonicalQueryString\n$canonicalHeaders\n$signedHeadersString\n$hencode";
     }
 
 // CanonicalURI returns request uri
@@ -235,6 +245,7 @@ class Signer
     {
         date_default_timezone_set('UTC');
         $date = $this->findHeader($r, HeaderXDate);
+        $t = null;
         if ($date) {
             $t = date_timestamp_get(date_create_from_format(BasicDateFormat, $date));
         }
@@ -252,6 +263,10 @@ class Signer
         $signature = $this->SignStringToSign($stringToSign, $this->Secret);
         $authValue = $this->AuthHeaderValue($signature, $this->Key, $signedHeaders);
         $r->headers[HeaderAuthorization] = $authValue;
+
+        if ($this->SecurityToken != '') {
+            $r->headers[HXSecurityToken] = $this->SecurityToken;
+        }
 
         $curl = curl_init();
         $uri = str_replace(array("%2F"), array("/"), rawurlencode($r->uri));
