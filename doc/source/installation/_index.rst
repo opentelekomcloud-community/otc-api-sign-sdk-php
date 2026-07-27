@@ -5,7 +5,7 @@ Installation
 
 The latest state of the packages can be installed directly from the GitHub repository.
 
-Installation php
+Install php
 ------------------------------
 
 .. code-block:: shell
