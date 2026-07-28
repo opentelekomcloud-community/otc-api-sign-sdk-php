@@ -19,10 +19,6 @@
   "autoload": {
     "psr-4": {
       "OTC\\": "otc_api_sign_core/"
-    },
-    "files": [
-      "otc_api_sign_core/Signer.php",
-      "otc_api_sign_core/Request.php"
-    ]
+    }
   }
 }
