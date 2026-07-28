@@ -8,4 +8,5 @@ Samples
    :includehidden:
 
    AK/SK signing <aksk/_index>
+   FunctionGraph <functiongraph/_index>
    
