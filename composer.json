@@ -11,8 +11,8 @@
     "ext-curl": "*"
   },
   "autoload": {
-    "files": [
-      "otc_api_sign_core/signer.php"
-    ]
+    "psr-4": {
+      "otc_api_sign_core\\": "otc_api_sign_core/*"
+    }
   }
 }

@@ -25,13 +25,7 @@ as described in the :ref:`installation section <ref_installation>`.
 .. code-block:: json
   :caption: composer.json
 
-  {
-    "repositories": [
-      {
-        "type": "vcs",
-        "url": "https://github.com/opentelekomcloud-community/otc-api-sign-sdk-php.git"
-      }
-    ],
+  {    
     "require": {
       "opentelekomcloud-community/otc-api-sign-sdk-php": "dev-main as 1.0.0"
     }
@@ -44,7 +38,7 @@ To install dependencies, run the following command:
 
 .. code-block:: bash
 
-  composer install
+  composer update
 
 Create a php file
 """""""""""""""""""""""""

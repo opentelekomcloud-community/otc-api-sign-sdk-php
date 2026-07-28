@@ -1,12 +1,9 @@
 {
   "name": "opentelekomcloud-community/fg-ecs-start",
+  "description": "Sample for a FunctionGraph function to start an ECS instance",
+  "license": "Apache-2.0",
   "type": "project",
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/opentelekomcloud-community/otc-api-sign-sdk-php.git"
-    }
-  ],
+
   "require": {
     "opentelekomcloud-community/otc-api-sign-sdk-php": "dev-main as 1.0.0"
   },

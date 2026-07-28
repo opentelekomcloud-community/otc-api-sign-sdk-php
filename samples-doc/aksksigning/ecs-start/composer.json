@@ -1,11 +1,8 @@
 {
   "name": "opentelekomcloud-community/ecs-start",
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/opentelekomcloud-community/otc-api-sign-sdk-php.git"
-    }
-  ],
+  "description": "Sample start an ECS instance",
+  "license": "Apache-2.0",
+  "type": "project",
   "require": {
     "opentelekomcloud-community/otc-api-sign-sdk-php": "dev-main as 1.0.0"
   }
