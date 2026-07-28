@@ -1,6 +1,9 @@
 <?php
 require("../otc_api_sign_core/signer.php");
 
+use OTC\Signer;
+use OTC\Request;
+
 function checkEnvVars() {
     $required = ['OTC_SDK_PROJECT_ID', 'OTC_SDK_AK', 'OTC_SDK_SK', 'ECS_INSTANCE_ID'];
     $missing = [];
