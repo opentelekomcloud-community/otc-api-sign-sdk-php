@@ -1,6 +1,9 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 
+use OTC\Signer;
+use OTC\Request;
+
 
 function checkEnvVars() {
     $required = ['OTC_SDK_PROJECT_ID', 'OTC_SDK_AK', 'OTC_SDK_SK', 'ECS_INSTANCE_ID'];

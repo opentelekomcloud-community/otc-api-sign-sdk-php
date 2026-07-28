@@ -1,4 +1,6 @@
 <?php
+namespace OTC;
+
 define("BasicDateFormat", "Ymd\THis\Z");
 define("Algorithm", "SDK-HMAC-SHA256");
 define("HeaderXDate", "X-Sdk-Date");
