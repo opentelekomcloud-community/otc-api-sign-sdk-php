@@ -1,0 +1,27 @@
+{
+  "name": "opentelekomcloud-community/fg-ecs-start",
+  "type": "project",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/opentelekomcloud-community/otc-api-sign-sdk-php.git"
+    }
+  ],
+  "require": {
+    "opentelekomcloud-community/otc-api-sign-sdk-php": "dev-main as 1.0.0"
+  },
+  "archive": {
+    "exclude": [
+      "!vendor/*",
+      "/composer.json",
+      "/composer.lock",
+      "/makefile",
+      "vendor/opentelekomcloud-community/*",
+      "!vendor/opentelekomcloud-community/otc-api-sign-sdk-php/otc_api_sign_core/**"
+    ]
+  },
+  "config": {
+    "archive-format": "zip",
+    "optimize-autoloader": true
+  }
+}

@@ -1,22 +1,18 @@
 {
   "name": "opentelekomcloud-community/otc-api-sign-sdk-php",
+  "homepage": "https://opentelekomcloud-community.github.io/otc-api-sign-sdk-php",
+  "description": "T Cloud Public API Sign SDK for PHP",
   "type": "library",
+  "license": "Apache-2.0",
+  "support": {
+    "issues": "https://github.com/opentelekomcloud-community/otc-api-sign-sdk-php/issues"
+  },
   "require": {
     "ext-curl": "*"
   },
   "autoload": {
     "files": [
       "otc_api_sign_core/signer.php"
-    ]
-  },
-  "archive": {
-    "exclude": [
-      "/*",
-      "!/otc_api_sign_core",
-      "!/otc_api_sign_core/**",
-      "!/composer.json",
-      "!/LICENSE",
-      "!/README.md"
     ]
   }
 }

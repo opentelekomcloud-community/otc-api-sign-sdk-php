@@ -1,6 +1,5 @@
 <?php
-require_once __DIR__ . '/vendor/autoload.php';
-
+require("../otc_api_sign_core/signer.php");
 
 function checkEnvVars() {
     $required = ['OTC_SDK_PROJECT_ID', 'OTC_SDK_AK', 'OTC_SDK_SK', 'ECS_INSTANCE_ID'];
@@ -22,7 +21,7 @@ function checkEnvVars() {
 
 function startECS() {
     checkEnvVars();
-    
+
     $project_id = getenv('OTC_SDK_PROJECT_ID');
     $endpoint = 'ecs.eu-de.otc.t-systems.com';
     $instance_id = getenv('ECS_INSTANCE_ID');
@@ -30,6 +29,8 @@ function startECS() {
     $signer = new Signer();
     $signer->Key = getenv('OTC_SDK_AK');
     $signer->Secret = getenv('OTC_SDK_SK');
+
+
 
     echo "Starting ECS instance: " . $instance_id . "\n";
 
@@ -44,6 +45,7 @@ function startECS() {
 
     $headers = [
         'Content-Type' => 'application/json;charset=utf8',
+        // 'X-Sdk-Content-Sha256' => 'UNSIGNED-PAYLOAD',
     ];
 
     if ($project_id !== false && $project_id !== '') {
@@ -56,6 +58,8 @@ function startECS() {
 
     $curl = $signer->Sign($req);
 
+    
+
     // use proxy if defined in environment
     $proxy = getenv('HTTP_PROXY');
     if ($proxy !== false && $proxy !== '') {
@@ -67,6 +71,7 @@ function startECS() {
     curl_setopt($curl, CURLOPT_HEADER, true);
 
     $response = curl_exec($curl);
+
     $status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
     $header_size = curl_getinfo($curl, CURLINFO_HEADER_SIZE);
 
