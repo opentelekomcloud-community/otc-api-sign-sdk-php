@@ -1,5 +1,6 @@
 # otc-api-sign-sdk-php
-SDK for API signing for php
+
+This is the T Cloud Public SDK for API request signing for PHP.
 
 ## Documentation
 
