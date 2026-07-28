@@ -52,9 +52,10 @@ Create a php file in your project root directory with following content:
 
   require __DIR__ . '/vendor/autoload.php';
 
+  use OTC\Signer;
+  use OTC\Request;
+
   // generate a signer instance and set your access key and secret key
-
-
   $signer = new Signer();
   $signer->Key = "YOUR_ACCESS_KEY";
   $signer->Secret = "YOUR_SECRET_KEY";
