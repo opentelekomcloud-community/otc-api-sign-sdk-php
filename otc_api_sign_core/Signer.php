@@ -36,14 +36,14 @@ class Signer
   }
 
   // Build a CanonicalRequest from a regular request string
-//
-// CanonicalRequest =
-//  HTTPRequestMethod + '\n' +
-//  CanonicalURI + '\n' +
-//  CanonicalQueryString + '\n' +
-//  CanonicalHeaders + '\n' +
-//  SignedHeaders + '\n' +
-//  HexEncode(Hash(RequestPayload))
+  //
+  // CanonicalRequest =
+  //  HTTPRequestMethod + '\n' +
+  //  CanonicalURI + '\n' +
+  //  CanonicalQueryString + '\n' +
+  //  CanonicalHeaders + '\n' +
+  //  SignedHeaders + '\n' +
+  //  HexEncode(Hash(RequestPayload))
   function CanonicalRequest($r, $signedHeaders)
   {
     $CanonicalURI = $this->CanonicalURI($r);
@@ -154,7 +154,8 @@ class Signer
     return hash_hmac("sha256", $stringToSign, $signingKey);
   }
 
-  // Get the finalized value for the "Authorization" header. The signature parameter is the output from SignStringToSign
+  // Get the finalized value for the "Authorization" header.
+  // The signature parameter is the output from SignStringToSign
   function AuthHeaderValue($signature, $accessKey, $signedHeaders)
   {
     $signedHeadersString = join(";", $signedHeaders);
