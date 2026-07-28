@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
+use OTC\Signer;
+use OTC\Request;
 
 function handler($event, $context)
 {
