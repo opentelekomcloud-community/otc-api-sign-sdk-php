@@ -1,5 +1,6 @@
 <?php
-require("../otc_api_sign_core/signer.php");
+require("../otc_api_sign_core/Signer.php");
+require("../otc_api_sign_core/Request.php");
 
 use OTC\Signer;
 use OTC\Request;
