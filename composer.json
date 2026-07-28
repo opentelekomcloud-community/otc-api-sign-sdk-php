@@ -4,6 +4,12 @@
   "description": "T Cloud Public API Sign SDK for PHP",
   "type": "library",
   "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "T Cloud Public - Community",
+      "homepage": "https://community.open-telekom-cloud.com/"
+    }
+  ],
   "support": {
     "issues": "https://github.com/opentelekomcloud-community/otc-api-sign-sdk-php/issues"
   },
@@ -15,7 +21,8 @@
       "OTC\\": "otc_api_sign_core/"
     },
     "files": [
-      "otc_api_sign_core/signer.php"
+      "otc_api_sign_core/Signer.php",
+      "otc_api_sign_core/Request.php"
     ]
   }
 }
