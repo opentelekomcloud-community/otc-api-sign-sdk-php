@@ -27,7 +27,7 @@ as described in the :ref:`installation section <ref_installation>`.
 
   {    
     "require": {
-      "opentelekomcloud-community/otc-api-sign-sdk-php": "1.0.0"
+      "opentelekomcloud-community/otc-api-sign-sdk-php": "1.0.1"
     }
   }
 

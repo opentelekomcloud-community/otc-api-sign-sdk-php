@@ -228,8 +228,8 @@ sphinx_tabs_valid_builders = ['linkcheck']
 rst_prolog = f"""
 .. |github_repo| replace:: "https://github.com/opentelekomcloud-community/otc-api-sign-sdk-php.git"
 """
-# version = "1.0.0"
-# release = "1.0.0"
+# version = "1.0.1"
+# release = "1.0.1"
 
 # -- Options for extlinks ---------------------------------------
 
