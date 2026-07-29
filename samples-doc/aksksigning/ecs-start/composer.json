@@ -4,6 +4,6 @@
   "license": "Apache-2.0",
   "type": "project",
   "require": {
-    "opentelekomcloud-community/otc-api-sign-sdk-php": "1.0.1"
+    "opentelekomcloud-community/otc-api-sign-sdk-php": "1.0.2"
   }
 }
