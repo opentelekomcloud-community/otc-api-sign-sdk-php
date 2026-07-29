@@ -3,6 +3,10 @@
 Installation
 ===============
 
+.. toctree::
+   :maxdepth: 10
+   :includehidden:
+
 The latest state of the packages can be installed directly from the GitHub repository.
 
 .. note::

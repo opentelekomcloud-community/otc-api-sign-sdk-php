@@ -2,7 +2,7 @@ Start ECS using FunctionGraph and agency
 ========================================
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 10
    :includehidden:
    
 Sample on how to start an ECS instance using an agency.
