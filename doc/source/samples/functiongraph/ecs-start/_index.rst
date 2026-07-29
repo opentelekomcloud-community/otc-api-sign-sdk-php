@@ -5,7 +5,7 @@ Start ECS using FunctionGraph and agency
    :maxdepth: 10
    :includehidden:
 
-This sample show how to use functiongraph start to an ECS instance using 
+This sample shows how to use functiongraph start to an ECS instance using 
 following credentials retrieved by the agency:
 
 * $context->getSecurityAccessKey()

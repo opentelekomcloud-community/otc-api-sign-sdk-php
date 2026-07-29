@@ -1,4 +1,7 @@
-# Setup
+# FunctionGraph sample to start ECS
+
+This sample shows how to use functiongraph start to an ECS instance.
+
 
 ## Create deployment package
 
