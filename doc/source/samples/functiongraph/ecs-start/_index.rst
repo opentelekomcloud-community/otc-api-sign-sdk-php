@@ -40,6 +40,26 @@ Install dependencies using composer:
 
    composer update
 
+
+
+Following settings in composer.json are used to build a zip file for deployment to FunctionGraph
+(you may need to adjust the settings for your project):
+
+.. code-block:: json
+   :caption: zip settings
+
+    {
+      "archive": {
+        "exclude": [
+          "/Makefile"          
+        ]
+      },
+      "config": {
+        "archive-format": "zip",
+      }
+    }
+   
+
 To build the deployment zip, execute following command in
 folder: **samples-doc/functiongraph/ecs-start**
 

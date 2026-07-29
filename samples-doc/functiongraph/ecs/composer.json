@@ -8,13 +8,8 @@
     "opentelekomcloud-community/otc-api-sign-sdk-php": "1.0.2"
   },
   "archive": {
-    "exclude": [
-      "!vendor/*",
-      "/composer.json",
-      "/composer.lock",
-      "/makefile",
-      "vendor/opentelekomcloud-community/*",
-      "!vendor/opentelekomcloud-community/otc-api-sign-sdk-php/otc_api_sign_core/**"
+    "exclude": [  
+      "/Makefile"
     ]
   },
   "config": {
