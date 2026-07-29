@@ -45,6 +45,6 @@ To add the dependency add following to your composer.json:
 
     {     
       "require": {
-        "opentelekomcloud-community/otc-api-sign-sdk-php": "dev-main as 1.0.0"
+        "opentelekomcloud-community/otc-api-sign-sdk-php": "1.0.0"
       }
     }
