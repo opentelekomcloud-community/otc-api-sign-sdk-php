@@ -6,6 +6,9 @@ use OTC\Request;
 
 function handler($event, $context)
 {
+  // get logger from context
+  $logger = $context->getLogger();
+
   $project_id = getenv('RUNTIME_PROJECT_ID');
   $endpoint = $context->getUserData("ECS_ENDPOINT");
   $instance_id = $context->getUserData('ECS_INSTANCE_ID');
@@ -16,7 +19,7 @@ function handler($event, $context)
   $signer->Secret = $context->getSecuritySecretKey();
   $signer->SecurityToken = $context->getSecurityToken();
 
-  echo "Starting ECS instance: " . $instance_id . "\n";
+  $logger->info("Starting ECS instance: ". $instance_id);
 
   // see https://docs.otc.t-systems.com/elastic-cloud-server/api-ref/apis_recommended/batch_operations/starting_ecss_in_a_batch.html#en-us-topic-0020212207
   $url = 'https://' . $endpoint . '/v1/' . $project_id . '/cloudservers/action';
@@ -39,6 +42,7 @@ function handler($event, $context)
 
   $req = new Request('POST', $url, $headers, $body);
 
+  // sign the request
   $curl = $signer->Sign($req);
 
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -51,15 +55,18 @@ function handler($event, $context)
   $response_body = "";
 
   if ($status == 0) {
-    echo "Error: " . curl_error($curl) . "\n";
+
+    $logger->error("Error: " . curl_error($curl));
     $response_body = curl_error($curl);
     $status = 500;
   } else {
     $response_headers = substr($response, 0, $header_size);
     $response_body = substr($response, $header_size);
-    echo "Status Code: " . $status . "\n";
-    echo "Response Headers: " . $response_headers . "\n";
-    echo "Response Body: " . $response_body . "\n";
+
+    $logger->info("Status Code: " . $status);
+    $logger->info("Response Headers: " . $response_headers);
+    $logger->info("Response Body: " . $response_body);
+    
   }
   curl_close($curl);
 
