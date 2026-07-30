@@ -13,7 +13,7 @@ composer archive --format=zip --file=code
 
 ## Create Functiongraph function
 
-In FunctionGraph console create function with following settings:
+In [FunctionGraph console](https://console.otc.t-systems.com/functiongraph) create function with following settings:
 
 - **Create With**: `Create from scratch`
 - **Function Type**: `Event Function`
