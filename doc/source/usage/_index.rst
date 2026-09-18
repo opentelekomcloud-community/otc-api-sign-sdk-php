@@ -87,4 +87,15 @@ Create a php file in your project root directory with following content:
 
   ?>
 
+
+Running
+"""""""""""""""""""""""""
+
+Adjust the placeholders in the file with your actual values and run it using the following command:
+
+.. code-block:: bash
+
+   php index.php
+
+
 See the :ref:`Samples <ref_samples>` for more examples of using the SDK.
