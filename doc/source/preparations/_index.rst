@@ -69,7 +69,6 @@ Procedure
 
 6. Enter a description, and click **OK**.
 
-    - When creating an access key for an IAM user, you need to enter a verification code for identity authentication.
     - If operation protection is enabled, you need to enter a verification code for identity authentication when creating an access key for an IAM user.
 
 7. In the displayed dialog box, click **Download** to save the access key.
@@ -77,7 +76,7 @@ Procedure
    You can obtain the AK from the access key list and SK from the downloaded CSV file.
 
    - For details about how to obtain a temporary AK/SK, see :otc_docs:`Obtaining a Temporary AK/SK <identity-access-management/api-ref/apis/access_key_management/obtaining_a_temporary_ak_sk.html#en-us-topic-0097949518>`.
-   - Keep the CSV file properly. You can only download the file right after the access key is created.
-     However, if you cannot find the file to obtain the key information, you can create a key.
+   - Keep the CSV file stored properly. You can only download the file right after the access key is created.
+     However, if you do not download or lose the the file, you can create a new key.
    - Open the CSV file in the lower left corner, or choose Downloads in the browser and open the CSV file.
    - Keep your access keys secure and change them periodically for security purposes.
